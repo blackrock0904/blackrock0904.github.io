@@ -5,9 +5,9 @@
       <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <foreignObject x="-24" y="-24" width="88" height="88"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(12px);clip-path:url(#bgblur_0_1107_5330_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="24">
         <rect width="40" height="40" rx="4" fill="#EAE8E8" fill-opacity="0.6"/>
-        <rect x="8" y="9" width="24" height="2" fill="white"/>
-        <rect x="8" y="19" width="24" height="2" fill="white"/>
-        <rect x="8" y="29" width="24" height="2" fill="white"/>
+        <rect x="8" y="9" width="24" height="2" fill="black"/>
+        <rect x="8" y="19" width="24" height="2" fill="black"/>
+        <rect x="8" y="29" width="24" height="2" fill="black"/>
       </g>
         <defs>
           <clipPath id="bgblur_0_1107_5330_clip_path" transform="translate(24 24)"><rect width="40" height="40" rx="4"/>
@@ -18,8 +18,8 @@
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <foreignObject x="-24" y="-24" width="88" height="88"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(12px);clip-path:url(#bgblur_0_742_6842_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="24">
         <rect width="40" height="40" rx="4" fill="#EAE8E8" fill-opacity="0.6"/>
-        <rect x="10.8066" y="27.7783" width="24" height="2" transform="rotate(-45 10.8066 27.7783)" fill="white"/>
-        <rect x="12.2227" y="10.8076" width="24" height="2" transform="rotate(45 12.2227 10.8076)" fill="white"/>
+        <rect x="10.8066" y="27.7783" width="24" height="2" transform="rotate(-45 10.8066 27.7783)" fill="black"/>
+        <rect x="12.2227" y="10.8076" width="24" height="2" transform="rotate(45 12.2227 10.8076)" fill="black"/>
       </g>
         <defs>
           <clipPath id="bgblur_0_742_6842_clip_path" transform="translate(24 24)"><rect width="40" height="40" rx="4"/>

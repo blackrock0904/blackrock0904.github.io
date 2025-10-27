@@ -11,6 +11,7 @@
         <li><NuxtLink class="underline" to="/projects">Work</NuxtLink></li>
         <li><NuxtLink class="underline" to="/services">Services</NuxtLink></li>
         <li><NuxtLink class="underline" to="/about">About</NuxtLink></li>
+        <li><NuxtLink class="underline" to="/contacts">Contacts</NuxtLink></li>
       </ul>
       <ul class="list">
         <li class="text-gray">SOCIALS</li>
@@ -126,3 +127,5 @@ footer {
   }
 }
 </style>
+<script setup lang="ts">
+</script>
