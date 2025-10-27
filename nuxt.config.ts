@@ -46,7 +46,7 @@ export default defineNuxtConfig({
 
   // App configuration
   app: {
-    baseURL: '/nastya-2025/',
+    baseURL: '/',
     buildAssetsDir: '/assets/',
     head: {
       title: 'Make spacers',
