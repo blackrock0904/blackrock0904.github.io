@@ -1,33 +1,21 @@
 <template>
   <div class="marquee-container">
     <div class="marquee-track" :style="{ animationDuration: `${duration || 20}s` }">
-      <div
-        v-for="(logo, index) in logos"
-        :key="`${logo.name}-${index}`"
-        class="marquee-item"
-      >
-        <img
-          :src="logo.src"
-          :alt="logo.name"
-          class="logo-image"
-        />
+      <div v-for="(logo, index) in logos" :key="index" class="marquee-item">
+        <img :src="logo" alt="" class="logo-image"/>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-interface Logo {
-  name: string;
-  src: string;
-}
 
 interface Props {
-  logos: Logo[];
+  logos: string[];
   duration?: number;
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   duration: 20
 })
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <h1 class="head-1">We design with purpose for</h1>
-    <span class="head-1 text-gray">&gt;</span><Typewriter class="head-1 text-gray" :strings="['real spaces']"/>
+    <span class="head-1 text-gray">&gt;</span><Typewriter class="head-1 text-gray" :strings="Config.index.titleDynamic"/>
     <Carousel class="home-slider">
-      <SwiperSlide class="slide" v-for="(img, i) in ['/img/test.png', '/img/test.png', '/img/test.png' ]" :key="i">
+      <SwiperSlide class="slide" v-for="(img, i) in Config.index.slider" :key="i">
         <img :src="img" alt="" loading="lazy">
       </SwiperSlide>
     </Carousel>
@@ -39,7 +39,7 @@
       </div>
         <div class="other-clients">
           <Block light to="/projects" hint="Clients">
-            <LogoMarquee :logos="clientLogos" :duration="14" />
+            <LogoMarquee :logos="Config.index.clientsLogo" :duration="30" />
           </Block>
         </div>
       <div class="other-services">
@@ -64,6 +64,8 @@ import {SwiperSlide} from "swiper/vue";
 import Carousel from "~/components/Carousel.vue";
 import LogoMarquee from "~/components/LogoMarquee.vue";
 import BlockLink from "~/components/BlockLink.vue";
+import Config from "~/data/config.js";
+
 
 definePageMeta({
   layout: 'public',
@@ -72,13 +74,6 @@ definePageMeta({
     { name: 'description', content: 'Создаем красивые и функциональные решения для вашего бизнеса' }
   ]
 });
-
-const clientLogos = [
-  { name: 'Client 1', src: '/img/logo-client.svg' },
-  { name: 'Client 1', src: '/img/logo-client.svg' },
-  { name: 'Client 1', src: '/img/logo-client.svg' },
-  { name: 'Client 1', src: '/img/logo-client.svg' },
-];
 
 const reviews =  [
   { text: '“This studio helped us rethink our space from the ground up. The result is not just a beautiful environment it’s an experience that speaks our brand. The process was smooth and truly collaborative.”', author: '— Julia M., Art Director, lifestyle-brand' },
