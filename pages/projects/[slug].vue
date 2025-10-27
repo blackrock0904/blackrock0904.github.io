@@ -64,7 +64,19 @@ definePageMeta({
 
 const route = useRoute();
 const slug = computed(() => route.params.slug);
-const data = computed(() => projects[slug.value]);
+const data = computed(() => {
+  const projectId = parseInt(slug.value) - 1;
+  const project = projects[projectId];
+  
+  if (!project) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: 'Project not found'
+    });
+  }
+  
+  return project;
+});
 </script>
 
 <style lang="scss" scoped>

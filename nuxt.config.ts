@@ -1,12 +1,8 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-
-  // CSS configuration
-  // css: ['~/assets/scss/main.scss'],
 
   // Vite configuration for SCSS
   vite: {
@@ -27,13 +23,31 @@ export default defineNuxtConfig({
   // SSR/SSG configuration
   ssr: true,
   nitro: {
+    preset: 'static',
     prerender: {
-      routes: ['/']
+      routes: [
+        '/',
+        '/about',
+        '/contacts', 
+        '/services',
+        '/projects',
+        '/projects/1',
+        '/projects/2',
+        '/projects/3',
+        '/projects/4',
+        '/projects/5',
+        '/projects/6',
+        '/404'
+      ],
+      ignore: ['/404.html', '/200.html'],
+      failOnError: false
     }
   },
 
   // App configuration
   app: {
+    baseURL: '/',
+    buildAssetsDir: '/assets/',
     head: {
       title: 'Make spacers',
       meta: [
@@ -50,5 +64,6 @@ export default defineNuxtConfig({
       ]
     }
   },
+  
   modules: ['@vueuse/motion/nuxt'],
 })
