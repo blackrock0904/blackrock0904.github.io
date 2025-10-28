@@ -3,7 +3,7 @@
     <div v-motion :initial="{ y: 0 }" :enter="{ y: 0 }" :leave="{ y: -100 }" class="parallax-card">
       <div class="card-content">
         <div class="card-image">
-          <img src="/img/service-1.png" alt="Interior Design" loading="lazy"/>
+          <img src="/img/service-1.jpg" alt="Interior Design" loading="lazy"/>
         </div>
         <div class="card-text">
           <h3 class="card-title">Interior Design</h3>
@@ -18,7 +18,7 @@
     <div v-motion :initial="{ y: 100 }" :enter="{ y: 0 }" :leave="{ y: 100 }" class="parallax-card">
       <div class="card-content">
         <div class="card-image">
-          <img src="/img/service-2.png" alt="Space Styling & Decoration" loading="lazy" />
+          <img src="/img/service-2.jpg" alt="Space Styling & Decoration" loading="lazy" />
         </div>
         <div class="card-text">
           <h3 class="card-title">Space Styling & Decoration</h3>
