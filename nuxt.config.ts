@@ -50,6 +50,9 @@ export default defineNuxtConfig({
     buildAssetsDir: '/assets/',
     head: {
       title: 'Interior Design Montenegro | Make Spacers - Premium Design Studio',
+      htmlAttrs: {
+        lang: 'en'
+      },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
