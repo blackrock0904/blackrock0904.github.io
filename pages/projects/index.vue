@@ -2,23 +2,8 @@
   <div>
     <h1 class="head-1">Projects we’ve crafted with care</h1>
     <div class="projects">
-      <div>
-        <BlockWork to="/projects/1" image-url="/img/test.png" hint="Work" label="(INTERIOR DESIGN)" name="Good Earth Project" />
-      </div>
-      <div>
-        <BlockWork to="/projects/2" image-url="/img/test.png" hint="Work" label="(INTERIOR DESIGN)" name="Good Earth Project" />
-      </div>
-      <div>
-        <BlockWork to="/projects/3" image-url="/img/test.png" hint="Work" label="(INTERIOR DESIGN)" name="Good Earth Project" />
-      </div>
-      <div>
-        <BlockWork to="/projects/4" image-url="/img/test.png" hint="Work" label="(INTERIOR DESIGN)" name="Good Earth Project" />
-      </div>
-      <div>
-        <BlockWork to="/projects/5" image-url="/img/test.png" hint="Work" label="(INTERIOR DESIGN)" name="Good Earth Project" />
-      </div>
-      <div>
-        <BlockWork to="/projects/6" image-url="/img/test.png" hint="Work" label="(INTERIOR DESIGN)" name="Good Earth Project" />
+      <div v-for="(p, i) in Config.projects" :key="i">
+        <BlockWork to="/projects/0" :image-url="p.photos[0]" hint="Work" :label="p.label" :name="p.name" />
       </div>
     </div>
     <div class="projects-real">
@@ -28,11 +13,19 @@
 </template>
 
 <script setup>
+import Config from "~/data/config.js";
+
 definePageMeta({
   layout: 'public',
-  title: 'Projects',
+  title: 'Interior Design Portfolio Montenegro | Our Projects | Make Spacers',
   meta: [
-    { name: 'description', content: 'Создаем красивые и функциональные веб-решения для вашего бизнеса' }
+    { name: 'description', content: 'Explore our interior design portfolio in Montenegro. View our completed projects including residential homes, commercial spaces, and luxury properties in Budva, Kotor, Podgorica. Professional interior design examples.' },
+    { name: 'keywords', content: 'interior design portfolio Montenegro, design projects Budva, completed interiors Kotor, residential design Podgorica, commercial interior Montenegro, luxury interior design, design gallery' },
+    { property: 'og:title', content: 'Interior Design Portfolio Montenegro | Our Projects | Make Spacers' },
+    { property: 'og:description', content: 'Explore our interior design portfolio in Montenegro. View our completed projects including residential homes, commercial spaces, and luxury properties.' },
+    { property: 'og:url', content: 'https://blackrock0904.github.io/projects' },
+    { name: 'twitter:title', content: 'Interior Design Portfolio Montenegro' },
+    { name: 'twitter:description', content: 'Explore our interior design portfolio in Montenegro. View our completed projects and design examples.' }
   ]
 });
 </script>

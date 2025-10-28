@@ -3,7 +3,7 @@
     <div v-motion :initial="{ y: 0 }" :enter="{ y: 0 }" :leave="{ y: -100 }" class="parallax-card">
       <div class="card-content">
         <div class="card-image">
-          <img src="/img/test.png" alt="Interior Design" />
+          <img src="/img/service-1.png" alt="Interior Design" loading="lazy"/>
         </div>
         <div class="card-text">
           <h3 class="card-title">Interior Design</h3>
@@ -18,22 +18,7 @@
     <div v-motion :initial="{ y: 100 }" :enter="{ y: 0 }" :leave="{ y: 100 }" class="parallax-card">
       <div class="card-content">
         <div class="card-image">
-          <img src="/img/test.png" alt="Space Styling & Decoration" />
-        </div>
-        <div class="card-text">
-          <h3 class="card-title">Space Styling & Decoration</h3>
-          <div class="card-description">
-            <p>We style and decorate spaces to create the right atmosphere.</p>
-            <p>From events and showcases to interiors and displays, every element works together to make your space memorable.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div v-motion :initial="{ y: 100 }" :enter="{ y: 0 }" :leave="{ y: 100 }" class="parallax-card">
-      <div class="card-content">
-        <div class="card-image">
-          <img src="/img/test.png" alt="Space Styling & Decoration" />
+          <img src="/img/service-2.png" alt="Space Styling & Decoration" loading="lazy" />
         </div>
         <div class="card-text">
           <h3 class="card-title">Space Styling & Decoration</h3>

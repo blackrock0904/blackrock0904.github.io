@@ -27,9 +27,9 @@ if (process.server) {
 
 // SEO meta tags
 useHead({
-  title: '404 - Page Not Found | Make spacers',
+  title: '404 - Page Not Found | Interior Design Montenegro | Make Spacers',
   meta: [
-    { name: 'description', content: 'Page not found. Return to home or view our projects.' },
+    { name: 'description', content: 'Page not found. Return to our interior design portfolio or contact us for professional design services in Montenegro.' },
     { name: 'robots', content: 'noindex, nofollow' }
   ]
 })

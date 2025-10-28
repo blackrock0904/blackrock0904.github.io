@@ -1,19 +1,19 @@
 <template>
   <div class="about">
-    <h1 class="head-1">We’d love to hear from You</h1>
+    <h1 class="head-1">Let’s build something real</h1>
 
     <div class="about-team">
       <div>
-        <Block hint="Team" image-url="/img/team.svg" />
+        <Block hint="Team" image-url="/img/team/together.jpg" />
       </div>
       <div>
-        <Block hint="Ksenia" image-url="/img/team.svg" label="(DESIGNER)" />
+        <Block hint="Ksenia" image-url="/img/team/ksenia.jpg" label="(DESIGNER)" />
       </div>
       <div>
-        <Block hint="Anastasia" image-url="/img/team.svg" label="(DESIGNER)" />
+        <Block hint="Anastasia" image-url="/img/team/nastia.jpg" label="(DESIGNER)" />
       </div>
       <div>
-        <Block hint="Liza" image-url="/img/team.svg" label="(DECORATION)" />
+        <Block hint="Liza" image-url="/img/team/lisa.jpg" label="(DECORATION)" />
       </div>
       <div>
         <BlockLink hint="Team" to="/contacts" text="Wanna build with us? We’re always open to collaborations" link="Let’s collaborate" />
@@ -30,10 +30,10 @@
 
     <div class="about-services">
       <div>
-        <Expand title="Interior design" label="(01)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Interior design" label="(01)" text="We design interiors for homes, apartments, studios, cafés, and offices. From layout and furniture to materials and lighting — everything to make your space functional and beautiful." />
       </div>
       <div>
-        <Expand title="Space Styling  & Decoration" label="(02)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Space Styling  & Decoration" label="(02)" text="We style spaces for everyday life and special events — weddings, parties, showcases, or seasonal décor. Textiles, furniture, and accessories that add character and atmosphere." />
       </div>
     </div>
 
@@ -46,9 +46,15 @@
 <script setup>
 definePageMeta({
   layout: 'public',
-  title: 'About',
+  title: 'About Us | Interior Design Team Montenegro | Make Spacers',
   meta: [
-    { name: 'description', content: 'Создаем красивые и функциональные веб-решения для вашего бизнеса' }
+    { name: 'description', content: 'Meet our interior design team in Montenegro. We are Space Makers - designers who create beautiful, functional spaces with purpose. Professional interior design services in Budva, Kotor, Podgorica.' },
+    { name: 'keywords', content: 'interior design team Montenegro, space makers Montenegro, interior designers Budva, design team Kotor, professional interior design Podgorica, design studio Montenegro' },
+    { property: 'og:title', content: 'About Us | Interior Design Team Montenegro | Make Spacers' },
+    { property: 'og:description', content: 'Meet our interior design team in Montenegro. We are Space Makers - designers who create beautiful, functional spaces with purpose.' },
+    { property: 'og:url', content: 'https://blackrock0904.github.io/about' },
+    { name: 'twitter:title', content: 'About Us | Interior Design Team Montenegro' },
+    { name: 'twitter:description', content: 'Meet our interior design team in Montenegro. We create beautiful, functional spaces with purpose.' }
   ]
 });
 </script>

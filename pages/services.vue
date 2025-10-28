@@ -7,22 +7,22 @@
     <h2 class="head-1">The process:</h2>
     <div class="services-progress">
       <div>
-        <Expand title="Discovery & Brief" label="(01)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Discovery & Brief" label="(01)" text="We discuss your goals, style, budget, and timeline." />
       </div>
       <div>
-        <Expand title="Concept Direction" label="(02)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Concept Direction" label="(02)" text="We propose ideas and mood boards to set the right direction." />
       </div>
       <div>
-        <Expand title="Design Development" label="(03)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Design Development" label="(03)" text="We create layouts, select materials, furniture, and details." />
       </div>
       <div>
-        <Expand title="Visualization" label="(04)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Visualization" label="(04)" text="We show how the space will look through 3D or collages." />
       </div>
       <div>
-        <Expand title="Implementation Support" label="(05)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Implementation Support" label="(05)" text="We guide the process, assist contractors, and control execution." />
       </div>
       <div>
-        <Expand title="Post-Launch Support" label="(06)" text="Our process is intuitive and collaborative. We dive into context, ask a lot of questions, and build things that not only look good but actuallywork" />
+        <Expand title="Post-Launch Support" label="(06)" text="Final touches, décor styling, and support after project delivery." />
       </div>
     </div>
     <div class="services-real">
@@ -36,9 +36,15 @@ import ParallaxCards from "~/components/ParallaxCards.vue";
 
 definePageMeta({
   layout: 'public',
-  title: 'Services',
+  title: 'Interior Design Services Montenegro | Make Spacers',
   meta: [
-    { name: 'description', content: 'Создаем красивые и функциональные веб-решения для вашего бизнеса' }
+    { name: 'description', content: 'Professional interior design services in Montenegro. We offer interior design, space styling, decoration, and home staging services for residential and commercial properties in Budva, Kotor, Podgorica.' },
+    { name: 'keywords', content: 'interior design services Montenegro, space styling Montenegro, home decoration Budva, office design Kotor, commercial interior Podgorica, home staging Montenegro, interior consultation' },
+    { property: 'og:title', content: 'Interior Design Services Montenegro | Make Spacers' },
+    { property: 'og:description', content: 'Professional interior design services in Montenegro. We offer interior design, space styling, decoration, and home staging services.' },
+    { property: 'og:url', content: 'https://blackrock0904.github.io/services' },
+    { name: 'twitter:title', content: 'Interior Design Services Montenegro' },
+    { name: 'twitter:description', content: 'Professional interior design services in Montenegro. Interior design, space styling, decoration, and home staging.' }
   ]
 });
 </script>

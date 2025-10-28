@@ -1,5 +1,5 @@
 <template>
-  <component :is="to ? NuxtLink : 'div'" :to="to" class="project" :class="{ light }" :style="{ backgroundImage: `url(${imageUrl})` }">
+  <component :is="to ? NuxtLink : 'div'" :to="to" class="project" :class="{ light }" :style="styles">
     <div class="project-header flex justify-between align-center">
       <Point :text="hint"/>
       <Label v-if="label" :text="label" />
@@ -18,7 +18,15 @@ interface IProps {
   label?: string;
   light?: boolean;
 }
-defineProps<IProps>();
+const props = defineProps<IProps>();
+
+const styles = computed(() => {
+  if (!props.imageUrl) return '';
+
+  return {
+    backgroundImage: `url(${props.imageUrl})`
+  }
+})
 </script>
 
 <style scoped lang="scss">

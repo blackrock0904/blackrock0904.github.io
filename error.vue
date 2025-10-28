@@ -36,13 +36,13 @@ const handleError = () => {
 
 // SEO meta tags
 useHead({
-  title: `${props.error.statusCode || '500'} - ${props.error.statusCode === 404 ? 'Page Not Found' : 'Server Error'} | Make spacers`,
+  title: `${props.error.statusCode || '500'} - ${props.error.statusCode === 404 ? 'Page Not Found' : 'Server Error'} | Interior Design Montenegro | Make Spacers`,
   meta: [
-    { 
-      name: 'description', 
-      content: props.error.statusCode === 404 
-        ? 'Page not found. Return to home or view our projects.'
-        : 'A server error occurred. Please try again later.'
+    {
+      name: 'description',
+      content: props.error.statusCode === 404
+        ? 'Page not found. Return to our interior design portfolio or contact us for professional design services in Montenegro.'
+        : 'A server error occurred. Please try again later or contact our interior design team in Montenegro.'
     },
     { name: 'robots', content: 'noindex, nofollow' }
   ]

@@ -39,8 +39,18 @@
     <h2 class="head-1">Check out Case studies</h2>
 
     <div class="works">
-      <BlockWork to="/projects/1" hint="Work" name="GOOD ARCH PROJECT" label="(ARCHITECT / INTERIOR DESIGN)" image-url="/img/test.png" />
-      <BlockWork to="/projects/2" hint="Work" name="BAZAR HUB" label="(INTERIOR DESIGN)" image-url="/img/test.png" />
+      <BlockWork
+          :to="`/projects/${data.other[0].index}`"
+          hint="Work"
+          :name="Config.projects[data.other[0].index].name" :label="Config.projects[data.other[0].index].label"
+          :image-url="Config.projects[data.other[0].index].photos[data.other[0].photoIndex]"
+      />
+      <BlockWork
+          :to="`/projects/${data.other[1].index}`"
+          hint="Work"
+          :name="Config.projects[data.other[1].index].name" :label="Config.projects[data.other[1].index].label"
+          :image-url="Config.projects[data.other[1].index].photos[data.other[1].photoIndex]"
+      />
     </div>
 
     <div class="contacts">
@@ -50,32 +60,49 @@
 </template>
 
 <script setup>
-import projects from '/data/projects.json';
 import Carousel from "~/components/Carousel.vue";
-import {SwiperSlide} from "swiper/vue";
+import { SwiperSlide } from "swiper/vue";
+import Config from "~/data/config.js";
 
 definePageMeta({
-  layout: 'public',
-  title: 'Projects',
-  meta: [
-    { name: 'description', content: 'Создаем красивые и функциональные веб-решения для вашего бизнеса' }
-  ]
+  layout: 'public'
 });
 
 const route = useRoute();
 const slug = computed(() => route.params.slug);
 const data = computed(() => {
-  const projectId = parseInt(slug.value) - 1;
-  const project = projects[projectId];
-  
+  const projectId = parseInt(slug.value);
+  const project = Config.projects[projectId];
+
   if (!project) {
     throw createError({
       statusCode: 404,
       statusMessage: 'Project not found'
     });
   }
-  
+
   return project;
+});
+
+// Dynamic SEO meta tags
+useHead(() => {
+  const project = data.value;
+  const projectTitle = `${project.name} | Interior Design Project Montenegro | Make Spacers`;
+  const projectDescription = `View our ${project.service.toLowerCase()} project: ${project.name} in Montenegro. ${project.client} - ${project.year}. Professional interior design portfolio by Make Spacers.`;
+  
+  return {
+    title: projectTitle,
+    meta: [
+      { name: 'description', content: projectDescription },
+      { name: 'keywords', content: `interior design project Montenegro, ${project.name}, ${project.service} Montenegro, design portfolio Budva, interior design Kotor, ${project.client}` },
+      { property: 'og:title', content: projectTitle },
+      { property: 'og:description', content: projectDescription },
+      { property: 'og:url', content: `https://blackrock0904.github.io/projects/${slug.value}` },
+      { property: 'og:type', content: 'article' },
+      { name: 'twitter:title', content: projectTitle },
+      { name: 'twitter:description', content: projectDescription }
+    ]
+  };
 });
 </script>
 
@@ -106,8 +133,8 @@ h1 {
 
       li {
         display: grid;
-        grid-template-columns: 10rem 20rem;
-        gap: 16rem;
+        grid-template-columns: 10rem auto;
+        gap: 3rem;
         & > :nth-child(2) {
           font-weight: 500;
         }
@@ -207,8 +234,8 @@ h1 {
 
       li {
         display: grid;
-        grid-template-columns: 10rem 15rem;
-        gap: 6rem;
+        grid-template-columns: 10rem auto;
+        gap: 3rem;
 
         & > :nth-child(2) {
           font-weight: 500;

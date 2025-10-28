@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   // Vite configuration for SCSS
   vite: {
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
       routes: [
         '/',
         '/about',
-        '/contacts', 
+        '/contacts',
         '/services',
         '/projects',
         '/projects/1',
@@ -49,21 +49,34 @@ export default defineNuxtConfig({
     baseURL: '/',
     buildAssetsDir: '/assets/',
     head: {
-      title: 'Make spacers',
+      title: 'Interior Design Montenegro | Make Spacers - Premium Design Studio',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'TODO' }
+        { name: 'description', content: 'Professional interior design services in Montenegro. We create beautiful, functional spaces for homes, offices, and commercial properties. Expert design solutions for Budva, Kotor, Podgorica, and all Montenegro.' },
+        { name: 'keywords', content: 'interior design Montenegro, home design Budva, office design Kotor, commercial interior Podgorica, space styling Montenegro, interior designer Montenegro, home staging, luxury interior design' },
+        { name: 'author', content: 'Make Spacers' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'language', content: 'en' },
+        { name: 'geo.region', content: 'ME' },
+        { name: 'geo.country', content: 'Montenegro' },
+        { name: 'geo.placename', content: 'Montenegro' },
+        { property: 'og:title', content: 'Interior Design Montenegro | Make Spacers - Design Studio' },
+        { property: 'og:description', content: 'Professional interior design services in Montenegro. We create beautiful, functional spaces for homes, offices, and commercial properties.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'en_US' },
+        { property: 'og:site_name', content: 'Make Spacers' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Interior Design Montenegro | Make Spacers' },
+        { name: 'twitter:description', content: 'Professional interior design services in Montenegro. Expert design solutions for your space.' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=1' },
+        { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico?v=1' },
         { rel: 'manifest', href: '/site.webmanifest' }
       ]
     }
   },
-  
+
   modules: ['@vueuse/motion/nuxt'],
 })

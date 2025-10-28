@@ -8,8 +8,8 @@
       </SwiperSlide>
     </Carousel>
     <div class="home-projects">
-      <BlockWork to="/projects/1" hint="Work" name="GOOD ARCH PROJECT" label="(ARCHITECT / INTERIOR DESIGN)" image-url="/img/test.png" />
-      <BlockWork to="/projects/2" hint="Work" name="BAZAR HUB" label="(INTERIOR DESIGN)" image-url="/img/test.png" />
+      <BlockWork to="/projects/0" hint="Work" :name="Config.projects[0].name" :label="Config.projects[0].label" :image-url="Config.projects[0].photos[0]" />
+      <BlockWork to="/projects/3" hint="Work" :name="Config.projects[3].name" :label="Config.projects[3].label" :image-url="Config.projects[3].photos[4]" />
     </div>
     <div class="home-info hidden-mobile">
       <div class="text-gray">We don’t just design for looks.</div>
@@ -27,15 +27,15 @@
       <div class="other-carousel">
         <Block light hint="Words from clients">
           <Carousel class="other-slider">
-            <SwiperSlide class="other-slide" v-for="(el, i) in reviews" :key="i">
-              <div>{{ el.text}}</div>
-              <div>{{ el.author}}</div>
+            <SwiperSlide class="other-slide" v-for="(el, i) in Config.comments" :key="i">
+              <div>{{ el.text }}</div>
+              <div style="text-align: center">{{ el.author }}</div>
             </SwiperSlide>
           </Carousel>
         </Block>
       </div>
       <div class="other-team">
-        <BlockWork to="/contacts" hint="About" name="WHO WE ARE?" label="(TEAM)" image-url="/img/test.png" />
+        <BlockWork to="/contacts" hint="About" name="WHO WE ARE?" label="(TEAM)" image-url="/img/team/together.jpg" />
       </div>
         <div class="other-clients">
           <Block light to="/projects" hint="Clients">
@@ -50,7 +50,7 @@
         </Block>
       </div>
       <div class="other-work">
-        <BlockWork to="/projects" hint="Work" name="THE STUDIO NEST" label="(HOME STAGING)" image-url="/img/test.png" />
+        <BlockWork to="/projects/2" hint="Work" :name="Config.projects[2].name" :label="Config.projects[2].label" :image-url="Config.projects[2].photos[1]" />
       </div>
     </div>
     <div class="home-contacts-2">
@@ -69,9 +69,15 @@ import Config from "~/data/config.js";
 
 definePageMeta({
   layout: 'public',
-  title: 'Main',
+  title: 'Interior Design Montenegro | Make Spacers - Premium Design Studio',
   meta: [
-    { name: 'description', content: 'Создаем красивые и функциональные решения для вашего бизнеса' }
+    { name: 'description', content: 'Professional interior design services in Montenegro. We create beautiful, functional spaces for homes, offices, and commercial properties. Expert design solutions for Budva, Kotor, Podgorica, and all Montenegro.' },
+    { name: 'keywords', content: 'interior design Montenegro, home design Budva, office design Kotor, commercial interior Podgorica, space styling Montenegro, interior designer Montenegro, home staging, luxury interior design, modern interior Montenegro' },
+    { property: 'og:title', content: 'Interior Design Montenegro | Make Spacers - Premium Design Studio' },
+    { property: 'og:description', content: 'Professional interior design services in Montenegro. We create beautiful, functional spaces for homes, offices, and commercial properties.' },
+    { property: 'og:url', content: 'https://blackrock0904.github.io/' },
+    { name: 'twitter:title', content: 'Interior Design Montenegro | Make Spacers' },
+    { name: 'twitter:description', content: 'Professional interior design services in Montenegro. Expert design solutions for your space.' }
   ]
 });
 

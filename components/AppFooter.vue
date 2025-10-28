@@ -2,7 +2,7 @@
   <footer>
     <img src="/img/logo-footer.svg" alt="">
     <div class="mail">
-      <a class="underline" target="_blank" href="mailto:spacemakersme@gmail.com">spacemakersme@gmail.com</a>
+      <a class="underline" target="_blank" rel="noopener noreferrer" :href="`mailto:${ Config.contacts.email }`">{{ Config.contacts.email }}</a>
     </div>
     <div class="right">
       <ul class="list">
@@ -15,13 +15,17 @@
       </ul>
       <ul class="list">
         <li class="text-gray">SOCIALS</li>
-        <li><a class="underline" href="https://instagram.com" target="_blank">Instagram</a></li>
-        <li><a class="underline" href="https://telegram.com" target="_blank">Telegram</a></li>
-        <li><a class="underline" href="https://whatsapp.com" target="_blank">WhatsApp</a></li>
+        <li v-if="Config.contacts.instagram"><a class="underline" :href="Config.contacts.instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li v-if="Config.contacts.telegram"><a class="underline" :href="Config.contacts.telegram" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+        <li v-if="Config.contacts.whatsapp"><a class="underline" :href="Config.contacts.whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
       </ul>
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+import Config from "~/data/config";
+</script>
 
 <style lang="scss" scoped>
 footer {
@@ -127,5 +131,3 @@ footer {
   }
 }
 </style>
-<script setup lang="ts">
-</script>

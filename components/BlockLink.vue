@@ -1,17 +1,19 @@
 <template>
-  <Block light :to="to" :hint="hint" :label="label">
+  <component :is="to ? Block : 'div'" light :to="to" :hint="hint" :label="label">
     <div class="link-block">
       <div>{{ text }}</div>
       <div>{{ link }}</div>
     </div>
-  </Block>
+  </component>
 </template>
 
 <script setup lang="ts">
+import {Block} from "#components";
+
 interface IProps {
-  to: string;
+  to?: string;
   hint: string;
-  label: string;
+  label?: string;
   text: string;
   link: string;
 }
