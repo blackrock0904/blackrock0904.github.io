@@ -3,7 +3,7 @@
     <h1 class="head-1">Projects we’ve crafted with care</h1>
     <div class="projects">
       <div v-for="(p, i) in Config.projects" :key="i">
-        <BlockWork to="/projects/0" :image-url="p.photos[0]" hint="Work" :label="p.label" :name="p.name" />
+        <BlockWork :to="`/projects/${i}`" :image-url="p.photos[0]" hint="Work" :label="p.label" :name="p.name" />
       </div>
     </div>
     <div class="projects-real">
