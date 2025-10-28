@@ -45,21 +45,6 @@ const closeMenu = () => {
   }
 };
 
-useHead({
-  title: 'Main',
-  meta: [
-    { name: 'description', content: 'Создаем красивые и функциональные веб-решения для вашего бизнеса. Современный дизайн, адаптивная верстка, быстрая загрузка.' },
-    { name: 'keywords', content: 'веб-разработка, дизайн, сайты, мобильные приложения, UI/UX' },
-    { property: 'og:title', content: 'Anastasiia - Веб-разработка и дизайн' },
-    { property: 'og:description', content: 'Создаем красивые и функциональные веб-решения для вашего бизнеса.' },
-    { property: 'og:type', content: 'website' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-  ]
-})
 </script>
 
 <style scoped lang="scss">
